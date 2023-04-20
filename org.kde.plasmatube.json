@@ -23,13 +23,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/plasma-mobile/23.01.0/plasmatube-23.01.0.tar.xz",
-                    "sha256": "d23d2cb6c669a61f763e48aad44d02fdb141f81e4669ed59954ca9676a501c1a",
+                    "url": "https://download.kde.org/stable/release-service/23.04.0/src/plasmatube-23.04.0.tar.xz",
+                    "sha256": "983e5846a8a5b502ac8d98edf3d76313102433040baa302635873879f6a35b7e",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 328147,
                         "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/plasma-mobile/$version/plasmatube-$version.tar.xz"
+                        "url-template": "https://download.kde.org/stable/release-service/$version/src/plasmatube-$version.tar.xz"
                     }
                 }
             ]
