@@ -42,13 +42,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/23.04.3/src/plasmatube-23.04.3.tar.xz",
-                    "sha256": "8fdd54e00d7fa4fea6fa0e28f2a16eec5f23024b9240982cfccb8fd510fcbf72",
+                    "url": "https://download.kde.org/unstable/release-service/23.07.90/src/plasmatube-23.07.90.tar.xz",
+                    "sha256": "cf689573eddb4b92e89b93e4fb285e0b39f8210f7825d3fbbd8996f95c16fbc9",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": 328147,
+                        "project-id": 368663,
                         "stable-only": true,
-                        "url-template": "https://download.kde.org/stable/release-service/$version/src/plasmatube-$version.tar.xz"
+                        "url-template": "https://download.kde.org/unstable/release-service/$version/src/plasmatube-$version.tar.xz"
                     }
                 }
             ]
