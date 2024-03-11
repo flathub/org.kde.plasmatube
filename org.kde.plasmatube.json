@@ -1,7 +1,7 @@
 {
     "id": "org.kde.plasmatube",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-23.08",
+    "runtime-version": "6.6",
     "sdk": "org.kde.Sdk",
     "command": "plasmatube",
     "finish-args": [
@@ -17,7 +17,70 @@
         "generated/mpv.json",
         "generated/python3-yt-dlp.json",
         {
-            "name": "kirigamiaddons",
+            "name": "mpvqt",
+            "buildsystem": "cmake-ninja",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.kde.org/stable/mpvqt/mpvqt-1.0.0.tar.xz",
+                    "sha256": "9131d2a925e5f33e19b9d081dfd5f30d576abd87464d67c70bef41a486f54eb9",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 370634,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/mpvqt/mpvqt-$version.tar.xz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "libsecret",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dgtk_doc=false",
+                "-Dintrospection=false",
+                "-Dmanpage=false",
+                "-Dvapi=false",
+                "-Dcrypto=disabled"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libsecret/0.21/libsecret-0.21.4.tar.xz",
+                    "sha256": "163d08d783be6d4ab9a979ceb5a4fecbc1d9660d3c34168c581301cd53912b20",
+                    "x-checker-data": {
+                        "type": "gnome",
+                        "name": "libsecret",
+                        "stable-only": true
+                    }
+                }
+            ]
+        },
+        {
+            "name": "qtkeychain",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+                "-DBUILD_WITH_QT6=ON",
+                "-DCMAKE_INSTALL_LIBDIR=/app/lib",
+                "-DLIB_INSTALL_DIR=/app/lib",
+                "-DBUILD_TRANSLATIONS=NO"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/frankosterfeld/qtkeychain/archive/0.14.2.tar.gz",
+                    "sha256": "cf2e972b783ba66334a79a30f6b3a1ea794a1dc574d6c3bebae5ffd2f0399571",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 4138,
+                        "stable-only": true,
+                        "url-template": "https://github.com/frankosterfeld/qtkeychain/archive/$version.tar.gz"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "kirigami-addons",
             "config-opts": [
                 "-DBUILD_TESTING=OFF"
             ],
@@ -25,8 +88,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-0.11.0.tar.xz",
-                    "sha256": "05296c5afbe6804308bf9c0d2751f3b748b40d00fa784946d1dcdf3af4bffbad",
+                    "url": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.0.1.tar.xz",
+                    "sha256": "9d013847efb0048c6a2799ee0ed281b14eee15314ac20d7fba853197e45f29b7",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 242933,
@@ -42,8 +105,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/23.08.2/src/plasmatube-23.08.2.tar.xz",
-                    "sha256": "0e718456d31dfb316dd4cddc01a3164ad9a819629375d16b776a28533b849cb1",
+                    "url": "https://download.kde.org/stable/release-service/24.02.0/src/plasmatube-24.02.0.tar.xz",
+                    "sha256": "a53479dc1a87cf9852e381953f2d5a439bfd52669fedc9feed0ab14c09ff7919",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 328147,
@@ -51,6 +114,9 @@
                         "url-template": "https://download.kde.org/stable/release-service/$version/src/plasmatube-$version.tar.xz"
                     }
                 }
+            ],
+            "config-opts": [
+                "-DPLASMATUBE_FLATPAK=ON"
             ]
         }
     ]
