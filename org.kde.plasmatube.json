@@ -105,8 +105,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/24.05.0/src/plasmatube-24.05.0.tar.xz",
-                    "sha256": "3121bbdeb0e38f88f86f0e07cf47c7b88b8213bdc1f57489a37dd27928c111c1",
+                    "url": "https://download.kde.org/stable/release-service/24.05.1/src/plasmatube-24.05.1.tar.xz",
+                    "sha256": "32c9808f17905dc7dd5d960166ea58706501bc6db117a12c9bfd5bd8820137af",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 328147,
