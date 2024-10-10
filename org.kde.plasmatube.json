@@ -88,8 +88,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.4.0.tar.xz",
-                    "sha256": "56e3ceb52055b5603320ea08b27d3673d32a391a8d58646d998227d8b51f0a93",
+                    "url": "https://download.kde.org/stable/kirigami-addons/kirigami-addons-1.5.0.tar.xz",
+                    "sha256": "f9dfd191022b633ea3348f84730d7158a159dfe49668dba0a9e9bd678ac44e54",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 242933,
@@ -105,8 +105,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/24.08.1/src/plasmatube-24.08.1.tar.xz",
-                    "sha256": "26693e5a9c2a862b72b656b48564ebb6abae2e89421cd7fe7b1ffd7f98f4f264",
+                    "url": "https://download.kde.org/stable/release-service/24.08.2/src/plasmatube-24.08.2.tar.xz",
+                    "sha256": "6f6c9a59c42feedf3e4d0276aadaa3c2a9baf32a86269ff6a4ec75b30c37932c",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 328147,
