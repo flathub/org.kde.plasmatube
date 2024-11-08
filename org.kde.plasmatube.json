@@ -15,7 +15,25 @@
     "separate-locales": false,
     "modules": [
         "generated/mpv.json",
-        "generated/python3-yt-dlp.json",
+        {
+            "name": "yt-dlp",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --no-dependencies --prefix=/app *.whl"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/6e/e4/e45c5067a79780954b905db4a42aa83d7aaefd91e32b18ab91c77600e668/yt_dlp-2024.11.4-py3-none-any.whl",
+                    "sha256": "589d51ed9f154624a45c1f0ceb3d68d0d1e2031460e8dbc62139be631c20b388",
+                    "x-checker-data": {
+                        "type": "pypi",
+                        "name": "yt-dlp",
+                        "packagetype": "bdist_wheel"
+                    }
+                }
+            ]
+        },
         {
             "name": "mpvqt",
             "buildsystem": "cmake-ninja",
