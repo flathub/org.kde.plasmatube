@@ -5,29 +5,22 @@
         "/lib/pkgconfig",
         "/share/man"
     ],
-    "buildsystem": "simple",
-    "build-commands": [
-        "python3 waf configure --prefix=/app --enable-libmpv-shared --disable-cplayer --disable-build-date --disable-alsa",
-        "python3 waf build",
-        "python3 waf install"
+    "buildsystem": "meson",
+    "config-opts": [
+        "-Dbuild-date=false",
+        "-Dlibmpv=true"
     ],
     "sources": [
         {
             "type": "archive",
-            "url": "https://github.com/mpv-player/mpv/archive/refs/tags/v0.35.0.tar.gz",
-            "sha256": "dc411c899a64548250c142bf1fa1aa7528f1b4398a24c86b816093999049ec00"
-        },
-        {
-            "type": "file",
-            "url": "https://waf.io/waf-2.0.24",
-            "sha256": "93909bca823a675f9f40af7c65b24887c3a3c0efdf411ff1978ba827194bdeb0",
-            "dest-filename": "waf"
+            "url": "https://github.com/mpv-player/mpv/archive/refs/tags/v0.39.0.tar.gz",
+            "sha256": "2ca92437affb62c2b559b4419ea4785c70d023590500e8a52e95ea3ab4554683"
         }
     ],
     "add-extensions": {
         "org.freedesktop.Platform.ffmpeg-full": {
             "directory": "lib/ffmpeg",
-            "version": "23.08",
+            "version": "24.08",
             "add-ld-path": "."
         }
     },
@@ -44,9 +37,9 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://luajit.org/download/LuaJIT-2.1.0-beta3.tar.gz",
-                    "sha256": "1ad2e34b111c802f9d0cdf019e986909123237a28c746b21295b63c9e785d9c3"
+                    "type": "git",
+                    "url": "https://github.com/LuaJIT/LuaJIT.git",
+                    "commit": "f73e649a954b599fc184726c376476e7a5c439ca"
                 },
                 {
                     "type": "shell",
@@ -134,6 +127,22 @@
                     "type": "archive",
                     "url": "https://gitlab.freedesktop.org/uchardet/uchardet/-/archive/v0.0.7/uchardet-v0.0.7.tar.gz",
                     "sha256": "f3635d1d10e1470452bc42c1bf509451a9926b399a11740a9949e86069d69f58"
+                }
+            ]
+        },
+        {
+            "name": "libplacebo",
+            "buildsystem": "meson",
+            "cleanup": [
+                "/include",
+                "/lib/pkgconfig"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/haasn/libplacebo.git",
+                    "commit": "1fd3c7bde7b943fe8985c893310b5269a09b46c5",
+                    "tag": "v7.349.0"
                 }
             ]
         }
