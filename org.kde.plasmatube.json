@@ -24,8 +24,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/25/68/4f108193ebce3ee7beb5f9a21daa6bc875e261150b510be468626f151959/yt_dlp-2025.5.22-py3-none-any.whl",
-                    "sha256": "a49c4b76afeaded6254c3e2b759d8d5a13271aa963d5fccb51fe059d1c313151",
+                    "url": "https://files.pythonhosted.org/packages/1f/fc/cb3be70e9dd354d6f6ecb2200011a1d05a3a9c219e1adacfd5de77440d79/yt_dlp-2025.6.25-py3-none-any.whl",
+                    "sha256": "1eb31c9a47d56c7433be23a6ae084c640bd4e14961ad43076927ef05280871ea",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "yt-dlp",
@@ -123,8 +123,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/25.04.1/src/plasmatube-25.04.1.tar.xz",
-                    "sha256": "2c34b96d841591410483fed6a632db628b45c044313e9ffdf7105b0986387a62",
+                    "url": "https://download.kde.org/stable/release-service/25.04.2/src/plasmatube-25.04.2.tar.xz",
+                    "sha256": "544f80dbb003c81fc20f83c765f198c7ee31c6b7c7ef8d19724e6f7a249993a7",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 328147,
