@@ -19,6 +19,9 @@
             "add-ld-path": "."
         }
     },
+    "cleanup-commands": [
+        "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
+    ],
     "separate-locales": false,
     "modules": [
         "generated/mpv.json",
