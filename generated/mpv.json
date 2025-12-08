@@ -95,6 +95,10 @@
                     "url": "https://github.com/haasn/libplacebo.git",
                     "commit": "1fd3c7bde7b943fe8985c893310b5269a09b46c5",
                     "tag": "v7.349.0"
+                },
+                {
+                    "type": "patch",
+                    "path": "libplacebo-vulkan-python-xml.patch"
                 }
             ]
         }
