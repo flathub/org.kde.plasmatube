@@ -43,48 +43,6 @@
             ]
         },
         {
-            "name": "libv4l2",
-            "cleanup": [
-                "/sbin",
-                "/bin",
-                "/include",
-                "/lib/*.la",
-                "/lib/*/*.la",
-                "/lib*/*/*/*.la",
-                "/lib/pkgconfig",
-                "/share/man"
-            ],
-            "config-opts": [
-                "--disable-static",
-                "--disable-bpf",
-                "--with-udevdir=/app/lib/udev"
-            ],
-            "sources": [
-                {
-                "type": "archive",
-                "url": "https://linuxtv.org/downloads/v4l-utils/v4l-utils-1.22.1.tar.bz2",
-                "sha256": "65c6fbe830a44ca105c443b027182c1b2c9053a91d1e72ad849dfab388b94e31"
-                }
-            ]
-        },
-        {
-            "name": "nv-codec-headers",
-            "cleanup": [
-                "*"
-            ],
-            "no-autogen": true,
-            "make-install-args": [
-                "PREFIX=/app"
-            ],
-            "sources": [
-                {
-                "type": "archive",
-                "url": "https://github.com/FFmpeg/nv-codec-headers/releases/download/n11.1.5.1/nv-codec-headers-11.1.5.1.tar.gz",
-                "sha256": "a28cdde3ac0e9e02c2dde7a1b4de5333b4ac6148a8332ca712da243a3361a0d9"
-                }
-            ]
-        },
-        {
             "name": "libass",
             "cleanup": [
                 "/include",
@@ -107,7 +65,8 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DCMAKE_BUILD_TYPE=Release",
-                "-DBUILD_STATIC=0"
+                "-DBUILD_STATIC=0",
+                "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
             ],
             "cleanup": [
                 "/bin",
@@ -136,6 +95,10 @@
                     "url": "https://github.com/haasn/libplacebo.git",
                     "commit": "1fd3c7bde7b943fe8985c893310b5269a09b46c5",
                     "tag": "v7.349.0"
+                },
+                {
+                    "type": "patch",
+                    "path": "libplacebo-vulkan-python-xml.patch"
                 }
             ]
         }
