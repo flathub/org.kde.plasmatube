@@ -1,0 +1,28 @@
+From 65a620366b1500504f9b831c539f6d68f072a420 Mon Sep 17 00:00:00 2001
+From: User8395 <therealuser8395@proton.me>
+Date: Tue, 22 Sep 2026 09:03:18 -0400
+Subject: [PATCH] fix protocol being chopped off urls
+
+BUG: 525299
+
+The default value of the protocol config was `QStringLiteral("https")`, but QUrl didn't recognize it as a QStringLiteral whose value is "https", rather, it was seen as a QString whose value is `"QStringLiteral(\"https\")"`. `qInfo`'ing the API protocol value would return that. Because it wasn't recognized as a valid scheme, QUrl would ignore it and cut off any existing protocols from the final url.
+---
+ src/sourceconfig.kcfg | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/sourceconfig.kcfg b/src/sourceconfig.kcfg
+index f032ee1f..fdec6471 100644
+--- a/src/sourceconfig.kcfg
++++ b/src/sourceconfig.kcfg
+@@ -15,7 +15,7 @@ SPDX-License-Identifier: CC0-1.0
+       <entry name="url" type="string">
+       </entry>
+       <entry name="protocol" type="string">
+-        <default>QStringLiteral("https")</default>
++        <default>https</default>
+       </entry>
+       <entry key="type" type="Enum">
+         <choices>
+-- 
+GitLab
+

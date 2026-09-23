@@ -95,6 +95,10 @@
                         "stable-only": true,
                         "url-template": "https://download.kde.org/stable/release-service/$version/src/plasmatube-$version.tar.xz"
                     }
+                },
+                {
+                    "type": "patch",
+                    "path": "65a620366b1500504f9b831c539f6d68f072a420.patch"
                 }
             ],
             "config-opts": [
