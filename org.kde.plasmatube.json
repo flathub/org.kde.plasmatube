@@ -31,8 +31,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/69/b2/8cd1613f56eed7ceb64fbd4df3f1c01246bfb098e6f398228bafda22b80b/yt_dlp-2026.8.19-py3-none-any.whl",
-                    "sha256": "1d57897e94c6665a0a6f9bc54b34e584284e32c034ffab3a7df25d8f7b24eedf",
+                    "url": "https://files.pythonhosted.org/packages/7f/3d/16ea7d5638cf585991f2c5705e8083688dde633d32d0871f2404e0f4d827/yt_dlp-2026.10.26-py3-none-any.whl",
+                    "sha256": "a05c5b5d8562f7e8a62f5334348b406af4930d56d3a65f8021d14af0e22339ae",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "yt-dlp",
@@ -47,8 +47,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/mpvqt/mpvqt-1.2.0.tar.xz",
-                    "sha256": "8660ad79c0d60fed77f29b36e1742841466af5405de702c81a121e6eeb625ebb",
+                    "url": "https://download.kde.org/stable/mpvqt/mpvqt-1.2.1.tar.xz",
+                    "sha256": "6ff5f56a0edd8248073446e5cc038f47d4b17c46b6af43cf438123d0ac911189",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 370634,
@@ -87,8 +87,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/release-service/26.08.1/src/plasmatube-26.08.1.tar.xz",
-                    "sha256": "dac36f533e236663fb39478a1a88c22973a59e0e4a838df97da063f0ec814e12",
+                    "url": "https://download.kde.org/stable/release-service/26.08.2/src/plasmatube-26.08.2.tar.xz",
+                    "sha256": "1c950892b09098040fd03d60d13a029947d647d662d3489bfdee6f2ef30bf16e",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 328147,
